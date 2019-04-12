@@ -128,7 +128,7 @@ public class UriAction implements IAction {
    */
   private static void openUriWithActionView(Context context, Uri uri, Bundle extras) {
     Intent intent = getActionViewIntent(context, uri, extras);
-    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
     if (intent.resolveActivity(context.getPackageManager()) != null) {
       context.startActivity(intent);
     } else {
